@@ -2,21 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "normalize.css";
 import "./index.css";
-import "./styles/style1.css";
+// import "./styles/style1.css";
+import "./styles/style1.scss";
 // import App from "./App";
 import NavBar from "./components/navbar";
-import Maincontent from "./components/maincontent";
+// import Maincontent from "./components/maincontent";
 // import MyForm from "./components/myform";
 // import Item from "./components/product_item";
 import Items from "./components/product_items";
-// import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    <Maincontent />
+    {/* <Maincontent /> */}
     {/* <App /> */}
     {/* <MyForm /> */}
     <Items />

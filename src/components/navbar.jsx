@@ -3,8 +3,13 @@ import lang_en from "../img/flag_uk.png";
 import lang_fr from "../img/flag_fr.png";
 import lang_zh from "../img/flag_zh.png";
 
-//stateless functionnal component
+// get our fontawesome imports
+// import { faHome } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
+//stateless functionnal component
 class NavBar extends Component {
   state = {
     count: 0,
@@ -18,7 +23,7 @@ class NavBar extends Component {
     display: "block",
     // margin: "auto",
     // count: 0,
-    imageUrl: "https://picsum.photos/seed//picsum/280/90?blur=8",
+    imageUrl: "https://picsum.photos/seed//picsum/50/50?blur=2",
   };
 
   styles = {
@@ -34,7 +39,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-light bg-light">
         <ul className="navbarlist">
-          <ul className="navbarullogo">
+          <ul className="navbarulleft">
             <li>
               <a
                 className="navbar-brand-logo"
@@ -46,6 +51,13 @@ class NavBar extends Component {
                   alt=""
                 />
               </a>
+            </li>
+            <li>
+              <FontAwesomeIcon
+                icon={faShoppingCart}
+                size="2x"
+                color="#CCCCCC"
+              />
             </li>
           </ul>
           <ul className="navbarulmenu">
@@ -60,9 +72,6 @@ class NavBar extends Component {
             </li>
             <li>
               <a href="./">Support</a>
-            </li>
-            <li>
-              <a href="./">01 00 800 800</a>
             </li>
             <li className="navbar-lang">
               <a href="www.vvbb.fr">

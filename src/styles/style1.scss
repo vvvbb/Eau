@@ -1,0 +1,24 @@
+// Version SCSS 22/07/2020
+@import "./navbar";
+// @use './navbar.scss';
+@import "./items.scss";
+
+$opacityBackground: 0.6;
+
+body {
+  /* background-color: #adfcf9; */
+  margin: 0;
+  padding: 0;
+  background-color: GhostWhite;
+  background: linear-gradient(
+    131deg,
+    rgba(51, 204, 204, $opacityBackground) 0%,
+    rgba(51, 204, 204, $opacityBackground) 50%,
+    rgba(19, 128, 128, $opacityBackground) 50%,
+    rgba(19, 128, 128, $opacityBackground) 72%,
+    rgba(51, 204, 204, $opacityBackground) 72%,
+    rgba(51, 204, 204, $opacityBackground) 100%
+  );
+  background-attachment: scroll;
+  background-attachment: fixed;
+}
