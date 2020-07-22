@@ -1,6 +1,6 @@
 // import React from "react";
 import React, { Component } from "react";
-import "./components.css";
+// import "./components.css";
 
 // import NavBar from "./components/navbar";
 // import Counters from "./components/counters";
@@ -11,7 +11,7 @@ class Maincontent extends Component {
     tags: ["Evian", "Badoit", "Volvic", "Vichy"],
   };
 
-  img_properties = {
+  style_titre = {
     border: "10px dashed #89A894",
     display: "block",
     margin: "auto",
@@ -21,7 +21,7 @@ class Maincontent extends Component {
 
   styles = {
     fontSize: 50,
-    fontWeight: "bold",
+    // fontWeight: "bold",
     // color: "cyan",
     // color: "#49393B",
     display: "flex",
@@ -50,34 +50,42 @@ class Maincontent extends Component {
     // React.createElement("div")
     return (
       <div>
-        <h1 style={this.styles}>Buvez de l'eau à l’international</h1>
-        <p style={{ fontStyle: "italic" }}>
+        <h1 style={this.styles}>Une eau pure à l’international</h1>
+        <p
+          className="maintext style_titre"
+          style={{
+            display: "grid",
+            color: "#DDDDDD",
+            justifyContent: "space-around",
+            justifyItems: "center",
+            gridTemplateColumns: "auto",
+            fontStyle: "italic",
+            width: "90%",
+            margin: "auto",
+          }}
+        >
           <span>
-            Activez en quelques clics les numéros fixes ou mobiles dont vous
-            avez besoin dans plus de 100 destinations dans le monde. Utilisez
-            ces numéros pour déployer un support téléphonique dans chacun des
-            pays dans lequel vous opérez, ou équipez vos commerciaux de numéros
-            locaux pour leur prospection.{" "}
+            Les bienfaits de l'eau sont mondialement connus. Le corps est
+            composé en grande partie Activez en quelques clics les numéros fixes
+            ou mobiles dont vous avez besoin dans plus de 100 destinations dans
+            le monde. Utilisez ces numéros pour déployer un support téléphonique
+            dans chacun des pays dans lequel vous opérez, ou équipez vos
+            commerciaux de numéros locaux pour leur prospection.{" "}
           </span>
         </p>
 
-        <img
-          style={this.img_properties}
-          src={this.img_properties.imageUrl}
-          alt=""
-        />
+        <img style={this.style_titre} src={this.style_titre.imageUrl} alt="" />
 
         <div
           style={{
             display: "grid",
             color: "#4B644A",
-            // justifyContent: "space-around",
+            justifyContent: "space-around",
             justifyItems: "center",
             gridTemplateColumns: "auto",
           }}
         >
           <div>
-            <h1>testH1</h1>
             {this.state.tags.length === 0 && "Please create a new tag!"}{" "}
             {/*if array=0 first condition true // if and second condition true // answer second*/}
             {this.renderTags()}

@@ -9,6 +9,8 @@ class NavBar extends Component {
   state = {
     count: 0,
     tags: ["Evian", "Badoit", "Volvic", "Vichy"],
+    color: "red",
+    year: 1964,
   };
 
   img_properties = {
@@ -48,7 +50,7 @@ class NavBar extends Component {
           </ul>
           <ul className="navbarulmenu">
             <li>
-              <a href="https://www.w3schools.com/">Produit</a>
+              <a href="./">Produit</a>
             </li>
             <li>
               <a href="https://reactjs.org/">Tarif</a>

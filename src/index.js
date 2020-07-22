@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "normalize.css";
 import "./index.css";
-import "./components/components.css";
+import "./styles/style1.css";
 // import App from "./App";
 import NavBar from "./components/navbar";
 import Maincontent from "./components/maincontent";
+// import MyForm from "./components/myform";
+// import Item from "./components/product_item";
+import Items from "./components/product_items";
 // import "bootstrap/dist/css/bootstrap.css";
 
 import * as serviceWorker from "./serviceWorker";
@@ -14,6 +18,8 @@ ReactDOM.render(
     <NavBar />
     <Maincontent />
     {/* <App /> */}
+    {/* <MyForm /> */}
+    <Items />
   </React.StrictMode>,
   document.getElementById("root")
 );
