@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/scss/bootstrap.scss";
 import "normalize.css";
 import "./index.css";
 // import "./styles/style1.css";
@@ -10,8 +12,6 @@ import NavBar from "./components/navbar";
 // import MyForm from "./components/myform";
 // import Item from "./components/product_item";
 import Items from "./components/product_items";
-import "bootstrap/dist/css/bootstrap.css";
-import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 import * as serviceWorker from "./serviceWorker";
 

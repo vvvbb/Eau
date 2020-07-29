@@ -37,14 +37,11 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar0000 navbar-light bg-light">
         <ul className="navbarlist">
           <ul className="navbarulleft">
             <li>
-              <a
-                className="navbar-brand-logo"
-                href="https://www.youtube.com/watch?v=Ke90Tje7VS0"
-              >
+              <a className="navbar-brand-logo" href="./">
                 <img
                   style={this.img_properties}
                   src={this.img_properties.imageUrl}
@@ -59,13 +56,15 @@ class NavBar extends Component {
                 color="#CCCCCC"
               />
             </li>
+            <li>
+              <span className="badge badge-pill badge-secondary">
+                {this.props.totalCounters}
+              </span>
+            </li>
           </ul>
           <ul className="navbarulmenu">
             <li>
               <a href="./">Produit</a>
-            </li>
-            <li>
-              <a href="https://reactjs.org/">Tarif</a>
             </li>
             <li>
               <a href="https://www.w3schools.com/">Ressources</a>
@@ -97,7 +96,7 @@ class NavBar extends Component {
             </li>
             <li>
               <a href="./" className="navbar-connexion">
-                Essayer gratuitement
+                Free Sample
               </a>
             </li>
           </ul>

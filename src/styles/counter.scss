@@ -1,0 +1,16 @@
+/* COUNTER SECTION */
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  // border: 2px red dashed;
+  border: 1px #6c757d solid;
+
+  span {
+    align-self: center;
+    text-align: center;
+  }
+  * {
+    flex: 1 1 auto;
+  }
+}
