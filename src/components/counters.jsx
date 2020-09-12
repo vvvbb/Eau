@@ -4,10 +4,6 @@ import Counter from "./counter";
 
 // cc tab shortcut
 class Counters extends Component {
-  // onTestPourQueCaMarche = (counter) => {
-  //   this.setState({ value: this.state.counters[1].value + 1 });
-  // };
-
   render() {
     const { counters, onIncrement, onDecrease, unique } = this.props;
 
@@ -15,7 +11,7 @@ class Counters extends Component {
       <div>
         {counters.map((counter) => (
           <Counter
-            key={counter.id}
+            id={counter.id}
             onDecrease={onDecrease}
             onIncrement={onIncrement}
             // value={counter.value}

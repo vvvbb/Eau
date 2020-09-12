@@ -1,0 +1,112 @@
+.homepage {
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  h1,
+  h2,
+  p {
+    color: white;
+  }
+}
+
+.homepageUpper {
+  background-image: url("../img/landscape_mountain_resize.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  display: flex;
+  flex-direction: row;
+  //   justify-content: space-around;
+  align-items: center;
+  h1 {
+    font-size: 4rem;
+    // margin-top: 0; //!!
+    // top: 11em;
+    // padding-top: 0.67em;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  Button {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+  div:nth-child(1) {
+    margin-bottom: 100px;
+    margin-left: 5%;
+  }
+}
+
+.div-img {
+  display: none;
+  align-self: flex-end;
+  bottom: -50px;
+  img {
+    // border: 10px solid red;
+    width: 80%;
+  }
+}
+
+.homepageDown {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3rem;
+  p:nth-child(1) {
+    font-size: 1.3rem;
+    color: #444;
+  }
+  p:nth-child(2) {
+    font-size: 1.1rem;
+    color: grey;
+    font-style: italic;
+  }
+  Button {
+    margin-right: 2%;
+    font-size: 1rem;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .div-img {
+    display: block;
+  }
+}
+@media all and (min-width: 800px) {
+}
+@media all and (min-width: 1200px) {
+  .homepageUpper {
+    min-height: 60vh;
+    position: relative;
+    div:nth-child(1) {
+      margin-bottom: 100px;
+      margin-left: 20%;
+    }
+    div:nth-child(2) {
+      right: 10%;
+      position: absolute;
+    }
+    h1 {
+      font-size: 6rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    Button {
+      font-size: 2rem;
+    }
+  }
+  .div-img {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+  .homepageDown {
+    margin-left: 20%;
+  }
+}
+@media all and (min-width: 1400px) {
+  .homepageUpper {
+  }
+}

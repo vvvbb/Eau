@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+// import { NavLink } from "react-router-dom";
+// import { NavLink } from "react";
+import { Link } from "react-router-dom";
+
 import lang_en from "../img/flag_uk.png";
 import lang_fr from "../img/flag_fr.png";
 import lang_zh from "../img/flag_zh.png";
@@ -23,7 +27,7 @@ class NavBar extends Component {
     display: "block",
     // margin: "auto",
     // count: 0,
-    imageUrl: "https://picsum.photos/seed//picsum/50/50?blur=2",
+    imageUrl: "https://picsum.photos/seed//picsum/50/50?blur=1",
   };
 
   styles = {
@@ -64,13 +68,18 @@ class NavBar extends Component {
           </ul>
           <ul className="navbarulmenu">
             <li>
-              <a href="./">Produit</a>
+              {/* <a href="./">Produit</a> */}
+              {/* <NavLink to="/produit">Produit</NavLink> */}
+              <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <a href="https://www.w3schools.com/">Ressources</a>
+              {/* <a href="./">Ressources</a> */}
+              {/* <NavLink to="/ressources">Ressources</NavLink> */}
+              <Link to="/ressources">Ressources</Link>
             </li>
             <li>
-              <a href="./">Support</a>
+              {/* <a href="./">Contact us</a> */}
+              <Link to="/">Contact us</Link>
             </li>
             <li className="navbar-lang">
               <a href="www.vvbb.fr">

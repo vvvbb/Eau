@@ -14,9 +14,7 @@ class CategoriesLarge extends Component {
         <li className="list-group-item">All Categories</li>
         <li className="list-group-item">Still Water</li>
         <li className="list-group-item">Sparkling Water</li>
-        <li className="list-group-item">Mountain Spring Water</li>
-        <li className="list-group-item">Mineral Water</li>
-        <li className="list-group-item">Tap Water</li>
+        <li className="list-group-item">Premium Water</li>
       </ul>
     );
   }
