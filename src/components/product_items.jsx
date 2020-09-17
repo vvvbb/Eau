@@ -7,12 +7,14 @@ const buttons = [
   { name: "All", value: "All" },
   { name: "Still Water", value: "Still Water" },
   { name: "Sparkling Water", value: "Sparkling Water" },
-  { name: "Premium Water", value: "Premium Water" },
+  // { name: "Premium Water", value: "Premium Water" },
 ];
 
 class Items extends Component {
   state = {
     count: 0,
+    test00: 0,
+    test000: "AAA",
     brands: [
       {
         id: 0,
@@ -103,7 +105,6 @@ class Items extends Component {
   };
 
   img_properties = {
-    // border: "1px dashed #89A894",
     display: "block",
     margin: "auto",
     imageUrl: "https://picsum.photos/200/?blur=1",
@@ -133,10 +134,6 @@ class Items extends Component {
           {/* <h2>{this.state.filterBrands.length}</h2> */}
         </div>
 
-        {/* const renderAll = this.state.filterBrands.map((brands) => (
-        <li key={brands.name}>{brands.name}</li>
-        )); */}
-
         {/* <CategoriesLarge /> */}
         <div className="items">
           {/* {this.state.brands.map((id) => (
@@ -148,14 +145,32 @@ class Items extends Component {
           ))} */}
           {this.state.filterBrands.map((id, brands) => (
             <Item
-              className="test"
               dataImg={id.imageUrl}
               dataText={id.name}
               dataPrice={id.price}
+              dateTest00={this.state.test00}
             />
           ))}
-          <ListComponent myList={myList} />,
-          <FilterNames names={names} />
+          {/* <ListComponent myList={myList} />, */}
+          {/* <FilterNames names={names} /> */}
+        </div>
+
+        <div className="group-total">
+          <span className="badge badge-secondary">
+            <h6>
+              Total filterBrands : <br />
+              {this.state.filterBrands.length}
+            </h6>
+            {/* <h4>{this.props.totalCounters}</h4> */}
+          </span>
+
+          <span className="badge badge-info">
+            <h6>
+              totalCounters : <br />
+              {this.state.brands.length}
+              {/* {this.state.counters.filter((c) => c.value > 0).length} */}
+            </h6>
+          </span>
         </div>
       </div>
     );
@@ -165,19 +180,19 @@ class Items extends Component {
 export default Items;
 
 /////////
-const myList = ["apple", "orange", "strawberry", "blueberry", "avocado"];
+// const myList = ["apple", "orange", "strawberry", "blueberry", "avocado"];
 
-function ListComponent(props) {
-  const listItems = myList.map((item) => <li>{item}</li>);
-  return <ul>{listItems}</ul>;
-}
+// function ListComponent(props) {
+//   const listItems = myList.map((item) => <li>{item}</li>);
+//   return <ul>{listItems}</ul>;
+// }
 
 ////////
-const names = ["James", "John", "Paul", "Ringo", "George"];
+// const names = ["James", "John", "Paul", "Ringo", "George"];
 
-function FilterNames(props) {
-  const test = names.filter((name) => name.includes("J"));
-  // .map((filteredName) => <li>{filteredName}</li>);
-  // console.log(test);
-  return <h1>{test}</h1>;
-}
+// function FilterNames(props) {
+//   const test = names.filter((name) => name.includes("J"));
+//   // .map((filteredName) => <li>{filteredName}</li>);
+//   // console.log(test);
+//   return <h1>{test}</h1>;
+// }

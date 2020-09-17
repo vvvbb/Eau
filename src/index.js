@@ -17,8 +17,9 @@ import NavBar from "./components/navbar";
 // import MyForm from "./components/myform";
 // import Item from "./components/product_item";
 import Items from "./components/product_items";
-import Homepage from "./components/homepage";
+import Home from "./components/home";
 import Ressources from "./components/ressources";
+import Contactus from "./components/contactus";
 // import Routes from "./Routes";
 
 ReactDOM.render(
@@ -37,13 +38,16 @@ ReactDOM.render(
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/shop">
-            <Shop />
+            <ShopPage />
           </Route>
           <Route path="/ressources">
-            <Ress />
+            <RessPage />
+          </Route>
+          <Route path="/contactus">
+            <Contactpage />
           </Route>
           <Route path="/">
-            <Home />
+            <HomePage />
           </Route>
         </Switch>
       </div>
@@ -57,14 +61,18 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-function Home() {
-  return <Homepage />;
+function HomePage() {
+  return <Home />;
 }
 
-function Shop() {
+function Contactpage() {
+  return <Contactus />;
+}
+
+function ShopPage() {
   return <Items />;
 }
 
-function Ress() {
+function RessPage() {
   return <Ressources />;
 }

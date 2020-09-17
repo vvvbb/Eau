@@ -129,6 +129,10 @@
 
 .ressources {
   position: relative;
+  color: white;
+}
+
+.ressources-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,11 +140,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: white;
 }
 
 .ressources-pict-mountain img {
-  position: fixed;
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -149,6 +151,7 @@
 }
 
 .ressources-title {
+  position: absolute;
   text-align: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -161,11 +164,9 @@
 }
 
 .ressources-list {
-  margin-top: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: auto;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -314,7 +315,7 @@ nav {
 }
 
 .ctg-flex {
-  margin-top: 10px;
+  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,10 +324,15 @@ nav {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background: url("../img/pexels-photo-2832039.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .group-button {
-  margin-left: 10px;
+  margin: 0 10px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,6 +341,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 10%;
 }
 
 .group-button :hover {
@@ -360,23 +367,15 @@ nav {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 25px;
-  margin: auto;
-  justify-items: center;
 }
 
 /* ITEM SECTION */
 .item {
-  border: 1px grey double;
   background-color: rgba(245, 245, 245, 0.8);
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   width: 99%;
 }
 
@@ -396,11 +395,25 @@ nav {
   }
 }
 
+@media all and (min-width: 800px) {
+  .items {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+}
+
 @media all and (min-width: 1200px) {
   .items {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     width: 80%;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .items {
+    width: 90%;
   }
 }
 

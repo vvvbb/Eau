@@ -2,15 +2,23 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import pict_water from "../img/kisspng-jug-pitcher-carafe-table-water-nos-collections-arcoroc.png";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import Items from "./product_items";
+import { Link } from "react-router-dom";
 
-function Homepage() {
+function Home() {
   return (
     <div className="homepage">
       <div className="homepageUpper">
         <div>
           <h1>Drink Water</h1>
           <h2>Water is good for your health</h2>
-          <Button variant="outline-light">Shop your water here</Button>
+
+          <Link to="/shop">
+            <Button variant="outline-light">Shop your water here</Button>
+          </Link>
+
+          {/* <Button variant="outline-light">Shop your water here</Button> */}
         </div>
         <div className="div-img">
           <img src={pict_water} alt="water" />
@@ -29,13 +37,23 @@ function Homepage() {
             enough each day is not at the top of many people’s lists of
             priorities.
           </p>
-          <Button variant="outline-secondary">Shop</Button>
+          {/* <Button variant="outline-secondary">Shop</Button>
           <Button variant="outline-secondary">Ressources</Button>
-          <Button variant="outline-secondary">Contact us</Button>
+          <Button variant="outline-secondary">Contact us</Button> */}
+
+          <Link to="/shop">
+            <Button variant="outline-secondary">Shop</Button>
+          </Link>
+          <Link to="/ressources">
+            <Button variant="outline-secondary">Ressources</Button>
+          </Link>
+          <Link to="/contactus">
+            <Button variant="outline-secondary">Contact us</Button>
+          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Homepage;
+export default Home;

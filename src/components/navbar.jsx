@@ -3,9 +3,9 @@ import React, { Component } from "react";
 // import { NavLink } from "react";
 import { Link } from "react-router-dom";
 
-import lang_en from "../img/flag_uk.png";
-import lang_fr from "../img/flag_fr.png";
-import lang_zh from "../img/flag_zh.png";
+// import lang_en from "../img/flag_uk.png";
+// import lang_fr from "../img/flag_fr.png";
+// import lang_zh from "../img/flag_zh.png";
 
 // get our fontawesome imports
 // import { faHome } from "@fortawesome/free-solid-svg-icons";
@@ -45,13 +45,15 @@ class NavBar extends Component {
         <ul className="navbarlist">
           <ul className="navbarulleft">
             <li>
-              <a className="navbar-brand-logo" href="./">
+              {/* <a className="navbar-brand-logo" href="./"> */}
+              <Link to="/">
                 <img
                   style={this.img_properties}
                   src={this.img_properties.imageUrl}
                   alt=""
                 />
-              </a>
+                {/* </a> */}
+              </Link>
             </li>
             <li>
               <FontAwesomeIcon
@@ -79,9 +81,9 @@ class NavBar extends Component {
             </li>
             <li>
               {/* <a href="./">Contact us</a> */}
-              <Link to="/">Contact us</Link>
+              <Link to="/contactus">Contact us</Link>
             </li>
-            <li className="navbar-lang">
+            {/* <li className="navbar-lang">
               <a href="www.vvbb.fr">
                 <img src={lang_en} alt="" className="flag" />
               </a>
@@ -97,7 +99,7 @@ class NavBar extends Component {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li>
               <a href="./" className="navbar-connexion">
                 Connexion

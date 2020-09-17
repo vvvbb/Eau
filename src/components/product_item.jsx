@@ -5,6 +5,11 @@ import Button from "react-bootstrap/Button";
 import Counters from "./counters";
 
 class Item extends Component {
+  constructor(props) {
+    super(props);
+    this.state.unique = this.props.dateTest00;
+  }
+
   state = {
     counters: [
       { id: 1, value: 0 },
@@ -12,9 +17,7 @@ class Item extends Component {
       // { id: 3, value: 1 },
       // { id: 4, value: 0 },
     ],
-    test0: 42,
-    test00: "ecrit ne parec",
-    unique: 0,
+    // unique: 0,
   };
   handleIncrement = (counter) => {
     console.log(counter);
@@ -42,30 +45,34 @@ class Item extends Component {
     }));
   };
 
-  newTempFonction002 = () => {
-    this.setState((prev) => ({ unique: prev.unique + 1 }));
-  };
+  // newTempFonction002 = () => {
+  //   this.setState((prev) => ({ unique: prev.unique + 1 }));
+  // };
 
   render() {
     return (
-      // <Card border="secondary" style={{ width: "33vw", minWidth: "28rem" }}>
       <Card border="secondary" className="item">
+        {/* <h6>{this.state.counters.filter((c) => c.value > 0).length}</h6> */}
+        {/* <h6>{this.state.unique.map((c) => c.value > 0).length}</h6> */}
+        {/* <h6>{this.state.unique}</h6> */}
         <Card.Img variant="top" src={this.props.dataImg} />
         <Card.Body>
           <Card.Title>{this.props.dataText}</Card.Title>
           <Card.Title style={{ fontSize: "90%", color: "grey" }}>
             {this.props.dataPrice}
           </Card.Title>
-          {/* <Card.Text>
+          <Card.Text>
             Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text> */}
+            bulk of the card's content. {this.state.unique} AAA
+            {this.props.dateTest00}.
+          </Card.Text>
         </Card.Body>
         <Counters
           counters={this.state.counters}
           onIncrement={this.handleIncrement}
           onDecrease={this.handleDecrease}
           unique={this.state.unique}
+          // unique={this.props.dataTest00}
         />
         <Button
           variant="secondary"
