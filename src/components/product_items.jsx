@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import Item from "./product_item";
 import { Button } from "react-bootstrap";
+import GroupButtonFilter from "./product_group-btn-filter";
+import GroupeTotal from "./product_group_total";
 // import CategoriesLarge from "./item_ctg_large";
-
-const buttons = [
-  { name: "All", value: "All" },
-  { name: "Still Water", value: "Still Water" },
-  { name: "Sparkling Water", value: "Sparkling Water" },
-  // { name: "Premium Water", value: "Premium Water" },
-];
 
 class Items extends Component {
   state = {
     count: 0,
     test00: 0,
     test000: "AAA",
+    carbondioxide: [
+      { key: 90, name: "All", value: "All" },
+      { key: 91, name: "Still Water", value: "Still Water" },
+      { key: 92, name: "Sparkling Water", value: "Sparkling Water" },
+    ],
     brands: [
       {
-        id: 0,
+        key: 0,
         name: "Evian",
         price: "1.53€",
         category: "Still Water",
@@ -26,7 +26,7 @@ class Items extends Component {
           "https://prod.isg.bruneau.media/OMM/Images_Basse_Definition/ZoomHD/70/10/52/701052.jpg?width=2000&height=2000&mode=Default&quality=85&scale=upscalecanvas",
       },
       {
-        id: 1,
+        key: 1,
         name: "Volvic",
         price: "1.47€",
         category: "Still Water",
@@ -35,7 +35,7 @@ class Items extends Component {
           "https://www.evianchezvous.com/media/catalog/product/cache/1/image/788x/9df78eab33525d08d6e5fb8d27136e95/b/o/bottle_easy_pack_1_5l_fr_3.png",
       },
       {
-        id: 2,
+        key: 2,
         name: "Badoit",
         price: "1.58€",
         category: "Sparkling Water",
@@ -43,7 +43,7 @@ class Items extends Component {
           "https://prod.isg.bruneau.media/OMM/Images_Basse_Definition/ZoomHD/70/10/53/701053.jpg?width=2000&height=2000&mode=Default&quality=85&scale=upscalecanvas",
       },
       {
-        id: 3,
+        key: 3,
         name: "Vittel",
         price: "1.41€",
         category: "Still Water",
@@ -51,7 +51,7 @@ class Items extends Component {
           "https://souriredessaveurs.com/3747-medium_default/eau-vittel-bouteille-plastique-pet-15-l.jpg",
       },
       {
-        id: 4,
+        key: 4,
         name: "Vichy",
         price: "1.62€",
         category: "Sparkling Water",
@@ -59,7 +59,7 @@ class Items extends Component {
           "https://drhmarket.com/15486-thickbox_default/bouteille-125l-eau-gazeuse-vichy-celestins.jpg",
       },
       {
-        id: 5,
+        key: 5,
         name: "San Pelegrino",
         category: "Sparkling Water",
         price: "1.59€",
@@ -67,7 +67,7 @@ class Items extends Component {
           "https://www.staples.fr/content/images/product/41325-00H_1_xnl.jpg",
       },
       {
-        id: 6,
+        key: 6,
         name: "Contrex",
         price: "1.43€",
         category: "Still Water",
@@ -75,7 +75,7 @@ class Items extends Component {
           "https://prod.isg.bruneau.media/OMM/Images_Basse_Definition/ZoomHD/15/55/15559.jpg?width=2000&height=2000&mode=Default&quality=85&scale=upscalecanvas",
       },
       {
-        id: 7,
+        key: 7,
         name: "Mont Blanc",
         price: "1.55€",
         category: "Still Water",
@@ -104,36 +104,13 @@ class Items extends Component {
     this.setState({ filterBrands });
   };
 
-  img_properties = {
-    display: "block",
-    margin: "auto",
-    imageUrl: "https://picsum.photos/200/?blur=1",
-  };
-
   render() {
-    // const renderAll = this.state.filterBrands.map((brands) => (
-    //   <li key={brands.name}>{brands.name}</li>
-    // ));
-
     return (
       <div className="ctg-flex">
-        <div className="group-button">
-          {buttons.map(({ name, value }) => (
-            <Button
-              className="btn btn-light btn-outline-secondary"
-              // aria-pressed="false"
-              // active
-              key={name}
-              value={value}
-              onClick={this.handleClick.bind(this, name)} //filterBrands onclick
-            >
-              {name}
-            </Button>
-          ))}
-          {/* <p>Coffee: {renderAll}</p> */}
-          {/* <h2>{this.state.filterBrands.length}</h2> */}
-        </div>
-
+        <GroupButtonFilter
+          carbondioxide={this.state.carbondioxide}
+          onClickChild={this.handleClick}
+        />
         {/* <CategoriesLarge /> */}
         <div className="items">
           {/* {this.state.brands.map((id) => (
@@ -145,6 +122,7 @@ class Items extends Component {
           ))} */}
           {this.state.filterBrands.map((id, brands) => (
             <Item
+              key={id.key}
               dataImg={id.imageUrl}
               dataText={id.name}
               dataPrice={id.price}
@@ -155,23 +133,11 @@ class Items extends Component {
           {/* <FilterNames names={names} /> */}
         </div>
 
-        <div className="group-total">
-          <span className="badge badge-secondary">
-            <h6>
-              Total filterBrands : <br />
-              {this.state.filterBrands.length}
-            </h6>
-            {/* <h4>{this.props.totalCounters}</h4> */}
-          </span>
-
-          <span className="badge badge-info">
-            <h6>
-              totalCounters : <br />
-              {this.state.brands.length}
-              {/* {this.state.counters.filter((c) => c.value > 0).length} */}
-            </h6>
-          </span>
-        </div>
+        <GroupeTotal
+          filterBrands={this.state.filterBrands}
+          test00={this.state.test00}
+          brands={this.state.brands}
+        />
       </div>
     );
   }
