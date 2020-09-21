@@ -1,7 +1,6 @@
-// import React, { Component } from "react";
-import React from "react";
+import React, { Component } from "react";
 
-class GroupeTotal extends React.Component {
+class GroupeTotal extends Component {
   render() {
     return (
       <div className="group-total">
@@ -24,8 +23,8 @@ class GroupeTotal extends React.Component {
 
         <span className="badge badge-danger">
           <h6>
-            this.props.test00 : <br />
-            {this.props.test00}
+            unique : <br />
+            {this.props.unique}
           </h6>
         </span>
 

@@ -6,9 +6,13 @@ import GroupeTotal from "./product_group_total";
 // import CategoriesLarge from "./item_ctg_large";
 
 class Items extends Component {
+  constructor(props) {
+    super(props);
+    this.state.unique = 0;
+  }
+
   state = {
     count: 0,
-    test00: 0,
     test000: "AAA",
     carbondioxide: [
       { id: 90, name: "All", value: "All" },
@@ -83,6 +87,12 @@ class Items extends Component {
           "https://shop.cabf.eu/wp-content/uploads/2017/05/8024884600301_001.jpg",
       },
     ],
+    counters: [
+      { id: 1, value: 0 },
+      // { id: 2, value: 0 },
+      // { id: 3, value: 1 },
+    ],
+    // unique: 2,
     filterBrands: [],
   };
 
@@ -104,6 +114,41 @@ class Items extends Component {
     this.setState({ filterBrands });
   };
 
+  addToCart = (counter) => {
+    console.log("addToCart DONE");
+    this.setState(({ unique }) => ({
+      unique: unique + 1,
+    }));
+  };
+
+  handleIncrement = (counter) => {
+    // console.log(counter);
+    console.log("handleIncrement DONE");
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value++;
+    // this.setState({ counters });
+    // this.setState({ unique: this.state.unique + 1 });
+    // console.log(this.state.unique);
+    this.setState(({ unique }) => ({
+      unique: unique + 1,
+    }));
+  };
+
+  handleDecrease = (counter) => {
+    console.log("handleDecrease DONE");
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value--;
+    // this.setState({ counters });
+    // this.setState({ unique: this.state.unique - 1 });
+    this.setState(({ unique }) => ({
+      unique: unique - 1,
+    }));
+  };
+
   render() {
     return (
       <div className="ctg-flex">
@@ -120,7 +165,13 @@ class Items extends Component {
               dataImg={id.imageUrl}
               dataText={id.name}
               dataPrice={id.price}
-              dateTest00={this.state.test00}
+              // dataUnique={this.state.counter_unique}
+              // counter_unique={this.state.counter_unique}
+              unique={this.state.unique}
+              counters={this.state.counters}
+              onClickaddToCart={this.addToCart}
+              onIncrement={this.handleIncrement}
+              onDecrease={this.handleDecrease}
             />
           ))}
         </div>
@@ -128,6 +179,7 @@ class Items extends Component {
         <GroupeTotal
           filterBrands={this.state.filterBrands}
           brands={this.state.brands}
+          unique={this.state.unique}
         />
       </div>
     );

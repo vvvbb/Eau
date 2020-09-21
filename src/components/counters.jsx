@@ -1,6 +1,5 @@
 import React, { Component } from "react"; //imrc tab shortcut
 import Counter from "./counter";
-// import Button from "react-bootstrap/Button";
 
 // cc tab shortcut
 class Counters extends Component {
