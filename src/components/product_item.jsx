@@ -45,10 +45,6 @@ class Item extends Component {
     }));
   };
 
-  // newTempFonction002 = () => {
-  //   this.setState((prev) => ({ unique: prev.unique + 1 }));
-  // };
-
   render() {
     return (
       <Card border="secondary" className="item">
