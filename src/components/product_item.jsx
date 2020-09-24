@@ -43,7 +43,7 @@ class Item extends Component {
   // };
 
   render() {
-    const { counters, onIncrement, onDecrease, unique } = this.props;
+    // const { counter, onIncrement, onDecrease, unique } = this.props;
 
     return (
       <Card border="secondary" className="item">
@@ -55,27 +55,32 @@ class Item extends Component {
           </Card.Title>
           <Card.Text>
             Some quick example text to build on the card title and make up the
-            bulk of the card's content. {this.props.unique} AAA
-            {this.props.counter}.
+            bulk of the card's content.
+            {/* {this.props.counters[1].value} AAA {this.props.counter[1]} */}
+            {this.props.brands[this.props.test].value}
           </Card.Text>
         </Card.Body>
         <Counters
-          counters={counters}
           // onIncrement={this.handleIncrement}
-          onIncrement={onIncrement}
-          onDecrease={onDecrease}
-          unique={unique}
-          // unique={this.props.dataTest00}
+          // counters={counters}
+          // key={this.props.key}
+          test={this.props.test}
+          counters={this.props.counters}
+          onIncrement={this.props.onIncrement}
+          onDecrease={this.props.onDecrease}
+          brands={this.props.brands}
         />
         <Button
           variant="secondary"
           size="lg"
-          style={{
-            display: this.props.unique === 0 ? "block" : "none",
-          }}
-          onClick={this.props.onClickaddToCart}
+          // style={{
+          //   display: this.props.unique === 0 ? "block" : "none",
+          // }}
+          // onClick={() => this.props.onClickaddToCart(this.props.counter)}
+          // onClick={() => this.props.onIncrement(this.props.brands)}
+          onClick={this.props.onClickTest}
         >
-          ADD TO CART {this.props.unique}
+          ADD TO CART {this.props.brands[this.props.test].name}
         </Button>
       </Card>
     );

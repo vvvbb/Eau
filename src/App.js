@@ -1,19 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import logo from "./logo.svg";
 import "./App.css";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+// import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 import "normalize.css";
-import "./index.css";
 import "./styles/style1.scss";
 
 import NavBar from "./components/navbar";
+import Home from "./components/home";
 // import Item from "./components/product_item";
 import Items from "./components/product_items";
-import Home from "./components/home";
 import Ressources from "./components/ressources";
 import Contactus from "./components/contactus";
 

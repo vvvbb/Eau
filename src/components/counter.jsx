@@ -2,6 +2,19 @@ import React, { Component } from "react"; //imrc tab shortcut
 import Button from "react-bootstrap/Button";
 
 class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { likes: 0 };
+    this.incFav = this.incFav.bind(this);
+    this.decFav = this.decFav.bind(this);
+  }
+  incFav(e) {
+    this.setState({ likes: this.state.likes + 1 });
+  }
+  decFav(e) {
+    this.setState({ likes: this.state.likes - 1 });
+  }
+
   state = {
     // count: 0,
     // value: this.props.counter.value,
@@ -47,10 +60,12 @@ class Counter extends Component {
         >
           -
         </Button>
+
         <span className="">
           {/* {this.formatCount()} in cart */}
-          {this.props.unique} in cart
+          {this.props.countervalue} in cart
         </span>
+
         <Button
           onClick={() => this.props.onIncrement(this.props.counter)}
           className=" btn"
