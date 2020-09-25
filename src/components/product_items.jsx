@@ -15,7 +15,6 @@ class Items extends Component {
 
   state = {
     count: 0,
-    test000: "AAA",
     carbondioxide: [
       { id: 90, name: "All", value: "All" },
       { id: 91, name: "Still Water", value: "Still Water" },
@@ -169,21 +168,12 @@ class Items extends Component {
               id={key}
               test={key}
               item={item}
-              // key={this.props.counter}
-              // counter={this.state.counter}MERDE
               dataImg={item.imageUrl}
               dataText={item.name}
               dataPrice={item.price}
-              // dataUnique={this.state.counter_unique}
-              // counter_unique={this.state.counter_unique}
-              unique={this.state.unique}
-              // counter={this.state.counters.value}
-              counters={this.state.counters}
-              counter={this.state.counter}
               onClickaddToCart={this.addToCart}
               onIncrement={this.handleIncrement}
               onDecrease={this.handleDecrease}
-              // onClickTest={this.handleVote.bind(this, 1)}
               brands={this.state.brands}
             />
           ))}
@@ -200,7 +190,6 @@ class Items extends Component {
         <GroupeTotal
           filterBrands={this.state.filterBrands}
           brands={this.state.brands}
-          unique={this.state.unique}
         />
       </div>
     );

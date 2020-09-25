@@ -2,6 +2,10 @@ import React, { Component } from "react";
 
 class GroupeTotal extends Component {
   render() {
+    const totalItem = this.props.brands.reduce(
+      (accumulator, pilot) => accumulator + pilot.value,
+      0
+    );
     return (
       <div className="group-total">
         <span className="badge badge-secondary">
@@ -23,8 +27,8 @@ class GroupeTotal extends Component {
 
         <span className="badge badge-danger">
           <h6>
-            unique : <br />
-            {this.props.unique}
+            totalItem : <br />
+            {totalItem}
           </h6>
         </span>
 

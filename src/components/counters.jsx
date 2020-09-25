@@ -8,60 +8,29 @@ class Counters extends Component {
     const { brands, onIncrement, onDecrease } = this.props;
     return (
       <div>
-        {/* {brands.map((counter, key) => (
-          <Counter
-            key={counter}
-            countervalue={brands[key].value}
-            onIncrement={onIncrement}
-            onDecrease={onDecrease}
-            brands={brands}
-          />
-        ))} */}
-        {brands.map((car, key) => (
-          <Counter
-            brands={brands}
-            key={key}
-            countervalue={brands[key].value}
-            onIncrement={onIncrement}
-            onDecrease={onDecrease}
-            car={car}
-            counter={car}
-            // key={car}
-          />
-          // <li key={car}>
-          //   {car}
-          //   {this.state.likes}
-          //   <button onClick={this.incFav}>+</button>
-          //   <button onClick={this.decFav}>-</button>
-          // </li>;
-        ))}
+        {brands
+          // .filter((pilot) => pilot.key === this.props.test)
+          // .filter((dd) => this.props.test === 1)
+          .map((counter, key) => (
+            <Counter
+              test={this.props.test}
+              brands={brands}
+              key={key}
+              // key={counter}
+              // key={counter.id}
+              // id={counter.id}
+              // value={counter.value}
+              car={counter}
+              counter={counter}
+              countervalue={brands[key].value}
+              onIncrement={onIncrement}
+              onDecrease={onDecrease}
+              display={key}
+            />
+          ))
+          .filter(() => 0 === this.props.test)}
       </div>
     );
-
-    // <ul>
-    //   {cars.map((car, key) =>
-    //   <Car car={car} key={car} />}
-    // </ul>
-
-    // const { counters, onIncrement, onDecrease, unique } = this.props;
-    // return (
-    //   <div>
-    //     {counters.map((counter) => (
-    //       <Counter
-    //         // id={counter.id}
-    //         key={counter.id}
-    //         // counter={counter}
-    //         counter={counter.value}
-    //         onIncrement={onIncrement}
-    //         onDecrease={onDecrease}
-    //         // value={counter.value}
-    //         // id={counter.id}
-    //         // selected={counter.selected}
-    //         unique={unique}
-    //       />
-    //     ))}
-    //   </div>
-    // );
   }
 }
 

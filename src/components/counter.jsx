@@ -15,20 +15,6 @@ class Counter extends Component {
     this.setState({ likes: this.state.likes - 1 });
   }
 
-  state = {
-    // count: 0,
-    // value: this.props.counter.value,
-    // tags: ["tag1", "tag2", "tag3"],
-  };
-
-  // handleIncrement = () => {
-  //   //   // console.log("Increment Cliked", this);
-  //   this.setState({ value: this.state.value + 1 });
-  // };
-  // handleDecrease = () => {
-  //   this.setState({ value: this.state.value - 1 });
-  // };
-
   formatCount() {
     const value = this.props.unique;
     return value === 0 ? "Zero" : value;
@@ -48,9 +34,9 @@ class Counter extends Component {
     return (
       <div
         className="counter"
-        style={{
-          display: this.props.unique === 0 ? "none" : "flex",
-        }}
+        // style={{
+        //   display: this.props.unique === 0 ? "none" : "flex",
+        // }}
       >
         <Button
           onClick={() => this.props.onDecrease(this.props.counter)}
@@ -58,7 +44,14 @@ class Counter extends Component {
           size="lg"
           variant="secondary"
         >
-          -
+          - <hr />
+          display : {this.props.display}
+          <br />
+          test : {this.props.test}
+          {/* <br /> */}
+          {/* counter.value : {this.props.counter.value} */}
+          {/* <br /> */}
+          {/* display : {this.props.display} */}
         </Button>
 
         <span className="">
