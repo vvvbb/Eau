@@ -20,11 +20,12 @@ class Item extends Component {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
             {/* {this.props.counters[1].value} AAA {this.props.counter[1]} */}
-            {this.props.brands[this.props.test].value} AAA {this.props.test}
+            {this.props.brands[this.props.id].value} AAA {this.props.id}
           </Card.Text>
         </Card.Body>
         <Counters
-          test={this.props.test}
+          item={this.props.item}
+          id={this.props.id}
           counters={counters}
           onIncrement={onIncrement}
           onDecrease={onDecrease}
@@ -33,14 +34,14 @@ class Item extends Component {
         <Button
           variant="secondary"
           size="lg"
-          // style={{
-          //   display:
-          //     this.props.brands[this.props.test].value === 0 ? "block" : "none",
-          // }}
-          // onClick={() => this.props.onIncrement(this.props.brands)}
-          onClick={this.props.onClickTest}
+          style={{
+            display:
+              this.props.brands[this.props.id].value === 0 ? "block" : "none",
+          }}
+          onClick={() => this.props.onIncrement(this.props.item)}
         >
-          ADD TO CART {this.props.brands[this.props.test].name}
+          ADD TO CART
+          {/* {this.props.brands[this.props.id].name} */}
         </Button>
       </Card>
     );

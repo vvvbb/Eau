@@ -34,24 +34,18 @@ class Counter extends Component {
     return (
       <div
         className="counter"
-        // style={{
-        //   display: this.props.unique === 0 ? "none" : "flex",
-        // }}
+        style={{
+          display:
+            this.props.brands[this.props.id].value === 0 ? "none" : "flex",
+        }}
       >
         <Button
-          onClick={() => this.props.onDecrease(this.props.counter)}
+          onClick={() => this.props.onDecrease(this.props.item)}
           className="btn"
           size="lg"
           variant="secondary"
         >
-          - <hr />
-          display : {this.props.display}
-          <br />
-          test : {this.props.test}
-          {/* <br /> */}
-          {/* counter.value : {this.props.counter.value} */}
-          {/* <br /> */}
-          {/* display : {this.props.display} */}
+          -
         </Button>
 
         <span className="">
@@ -60,7 +54,7 @@ class Counter extends Component {
         </span>
 
         <Button
-          onClick={() => this.props.onIncrement(this.props.counter)}
+          onClick={() => this.props.onIncrement(this.props.item)}
           className=" btn"
           size="lg"
           variant="secondary"

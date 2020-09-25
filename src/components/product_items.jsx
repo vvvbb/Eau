@@ -165,9 +165,8 @@ class Items extends Component {
           {this.state.brands.map((item, key) => (
             <Item
               key={key}
-              id={key}
-              test={key}
               item={item}
+              id={key}
               dataImg={item.imageUrl}
               dataText={item.name}
               dataPrice={item.price}
