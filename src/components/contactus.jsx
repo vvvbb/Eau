@@ -1,11 +1,9 @@
-// import React, { Component } from "react";
 import React from "react";
-// import pict_mountain from "../img/landscape_mountain_resize.jpg";
-//   background-image: url("../img/landscape_mountain_resize.jpg");
 // import { Button, Form, Col } from "react-bootstrap";
-// import { Button } from "react-bootstrap";
-import Input from "./form-input";
+import { Button } from "react-bootstrap";
 import HeaderBanner from "./header-banner";
+import Input from "./form-input";
+import TextArea from "./form-textarea";
 
 class Ressources extends React.Component {
   constructor(props) {
@@ -30,10 +28,27 @@ class Ressources extends React.Component {
 
         <div className="contactus-form">
           <form onSubmit={this.handleSubmit}>
-            <Input id={1} name="name" label="Your Name..." />
+            <div className="form-row">
+              <Input id={1} name="name" label="Your Name..." />
+              <Input id={2} name="lastname" label="Your Last Name..." />
+              {/* <p>P1</p> */}
+              {/* <p>P2</p> */}
+            </div>
 
-            <Input id={2} name="lastname" label="Your Last Name..." />
+            <select className="form-select" name="subject">
+              <option value="">--Subject--</option>
+              <option value="Request">Request</option>
+              <option value="Information">Information</option>
+              <option value="Specification">Specification</option>
+            </select>
+
+            <TextArea id={3} name="message" label="Your Message..." />
+
             {/* <input type="submit" value="Submit" /> */}
+
+            <Button variant="outline-dark" type="submit">
+              Submit
+            </Button>
           </form>
         </div>
       </div>

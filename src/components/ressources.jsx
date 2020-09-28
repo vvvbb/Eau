@@ -1,7 +1,4 @@
-// import React, { Component } from "react";
 import React from "react";
-// import pict_mountain from "../img/landscape_mountain_resize.jpg";
-//   background-image: url("../img/landscape_mountain_resize.jpg");
 import HeaderBanner from "./header-banner";
 
 class Ressources extends React.Component {

@@ -1,6 +1,6 @@
 import React from "react";
 
-class Input extends React.Component {
+class TextArea extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,19 +25,19 @@ class Input extends React.Component {
     return (
       <div
         className={
-          "form " +
+          "form formTextArea " +
           (this.state.focus || this.state.value !== "" ? "form-focus" : "")
         }
       >
-        <input
+        <textarea
           id={this.props.id}
-          type="text"
+          type="textarea"
           name={this.props.name}
           value={this.state.value}
           onChange={this.handleChange}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
-          maxLength={32}
+          maxLength={256}
         />
         <label
           className="label-name"
@@ -47,7 +47,7 @@ class Input extends React.Component {
             className={
               "content-name " +
               (this.state.focus || this.state.value !== ""
-                ? "content-name-focus"
+                ? "content-name-focus formTextArea-focus"
                 : "")
             }
           >
@@ -59,4 +59,4 @@ class Input extends React.Component {
   }
 }
 
-export default Input;
+export default TextArea;
