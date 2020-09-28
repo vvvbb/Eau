@@ -1,10 +1,11 @@
 // import React, { Component } from "react";
 import React from "react";
-import pict_mountain from "../img/landscape_mountain_resize.jpg";
+// import pict_mountain from "../img/landscape_mountain_resize.jpg";
 //   background-image: url("../img/landscape_mountain_resize.jpg");
 // import { Button, Form, Col } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 import Input from "./form-input";
+import HeaderBanner from "./header-banner";
 
 class Ressources extends React.Component {
   constructor(props) {
@@ -25,15 +26,7 @@ class Ressources extends React.Component {
   render() {
     return (
       <div className="contactus">
-        <div className="contactus-head">
-          <div className="contactus-pict-mountain">
-            <img src={pict_mountain} alt="mountain" />
-          </div>
-          <div className="contactus-title">
-            {/* <h1>Know Some Water Facts</h1> */}
-            <h1>Contact Us</h1>
-          </div>
-        </div>
+        <HeaderBanner title="Contact Us" />
 
         <div className="contactus-form">
           <form onSubmit={this.handleSubmit}>

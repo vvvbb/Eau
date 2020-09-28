@@ -1,20 +1,14 @@
 // import React, { Component } from "react";
 import React from "react";
-import pict_mountain from "../img/landscape_mountain_resize.jpg";
+// import pict_mountain from "../img/landscape_mountain_resize.jpg";
 //   background-image: url("../img/landscape_mountain_resize.jpg");
+import HeaderBanner from "./header-banner";
 
 class Ressources extends React.Component {
   render() {
     return (
       <div className="ressources">
-        <div className="ressources-head">
-          <div className="ressources-pict-mountain">
-            <img src={pict_mountain} alt="mountain" />
-          </div>
-          <div className="ressources-title">
-            <h1>Know Some Water Facts</h1>
-          </div>
-        </div>
+        <HeaderBanner title="Know Some Water Facts" />
 
         <div className="ressources-list">
           <ul>
