@@ -9,8 +9,8 @@ class Counters extends Component {
       <div>
         <Counter
           id={id}
-          brands={brands}
           item={item}
+          brands={brands}
           countervalue={brands[id].value}
           onIncrement={onIncrement}
           onDecrease={onDecrease}

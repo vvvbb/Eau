@@ -2,19 +2,6 @@ import React, { Component } from "react"; //imrc tab shortcut
 import Button from "react-bootstrap/Button";
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { likes: 0 };
-    this.incFav = this.incFav.bind(this);
-    this.decFav = this.decFav.bind(this);
-  }
-  incFav(e) {
-    this.setState({ likes: this.state.likes + 1 });
-  }
-  decFav(e) {
-    this.setState({ likes: this.state.likes - 1 });
-  }
-
   formatCount() {
     const value = this.props.unique;
     return value === 0 ? "Zero" : value;

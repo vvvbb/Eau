@@ -2,89 +2,44 @@
 import React from "react";
 import pict_mountain from "../img/landscape_mountain_resize.jpg";
 //   background-image: url("../img/landscape_mountain_resize.jpg");
-import { Button, Form, Col } from "react-bootstrap";
+// import { Button, Form, Col } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
+import Input from "./form-input";
 
 class Ressources extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: "", focus: false };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+  handleSubmit(event) {
+    alert("A name was submitted: " + this.state.value);
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <div className="ressources">
-        <div className="ressources-head">
-          <div className="ressources-pict-mountain">
+      <div className="contactus">
+        <div className="contactus-head">
+          <div className="contactus-pict-mountain">
             <img src={pict_mountain} alt="mountain" />
           </div>
-          <div className="ressources-title">
+          <div className="contactus-title">
             {/* <h1>Know Some Water Facts</h1> */}
             <h1>Contact Us</h1>
           </div>
         </div>
 
-        <div className="form-container">
-          <form action="action_page.php">
-            <Form.Row>
-              <Form.Group as={Col} controlId="formGridFirstName">
-                <Form.Label>First Name</Form.Label>
-                <Form.Control type="firstname" placeholder="Your name.." />
-              </Form.Group>
+        <div className="contactus-form">
+          <form onSubmit={this.handleSubmit}>
+            <Input id={1} name="name" label="Your Name..." />
 
-              <Form.Group as={Col} controlId="formGridLastName">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control type="lastame" placeholder="Your last name.." />
-              </Form.Group>
-            </Form.Row>
-
-            {/* <label for="fname">First Name</label>
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="Your name.."
-            />
-
-            <label for="lname">Last Name</label>
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="Your last name.."
-            /> */}
-
-            <Form.Group controlId="exampleForm.SelectCustom">
-              <Form.Label>Subject</Form.Label>
-              <Form.Control as="select" custom>
-                <option>Request</option>
-                <option>Information</option>
-                <option>Specification</option>
-              </Form.Control>
-            </Form.Group>
-
-            {/* <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select> */}
-
-            <Form.Group controlId="formGridMessage">
-              <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" placeholder="Write something.." />
-            </Form.Group>
-
-            {/* <label for="subject">Subject</label>
-            <textarea
-              id="subject"
-              name="subject"
-              placeholder="Write something.."
-              // style="height:200px"
-            ></textarea> */}
-
-            <Button
-              type="submit"
-              value="Submit"
-              variant="outline-secondary"
-              className="btn mb-2"
-            >
-              Submit
-            </Button>
+            <Input id={2} name="lastname" label="Your Last Name..." />
             {/* <input type="submit" value="Submit" /> */}
           </form>
         </div>

@@ -1,0 +1,119 @@
+///// COMMUN
+.contactus {
+  position: relative;
+  color: white;
+}
+.contactus-head {
+  display: flex;
+  flex-direction: column;
+}
+.contactus-pict-mountain img {
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  // height: 40%;
+  max-height: 60vh;
+}
+
+.contactus-title {
+  position: absolute;
+  text-align: center;
+  align-self: center;
+  h1 {
+    margin-top: 1rem;
+    font-size: 4rem;
+  }
+}
+
+///////
+
+.contactus {
+  //   height: 60vh;
+  //   display: flex;
+  //   justify-content: space-around;
+  //   align-items: center;
+  //   flex-direction: column;
+  //   font-family: sans-serif;
+  .contactus-form {
+    margin: auto;
+    width: 80vh;
+    // border: 10px forestgreen ridge;
+    // height: 60vh;
+    // margin-top: 10%;
+
+    .form {
+      margin: 10%;
+      width: 50%;
+      position: relative;
+      height: 70px;
+      overflow: hidden;
+      // border: 5px springgreen ridge;
+
+      input {
+        width: 100%;
+        height: 100%;
+        //   color: #595f6e;
+        // padding-top: 20px;
+        border: none;
+        background-color: ghostwhite;
+      }
+
+      label {
+        position: absolute;
+        color: black;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+      }
+
+      label::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -1px;
+        height: 100%;
+        width: 100%;
+        border-bottom: 3px solid $blue-color;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .form-focus {
+      label::after {
+        transform: translateX(0%);
+      }
+    }
+
+    // .label-name-focus {
+    //   label::after {
+    //     transform: translateX(0%);
+    //   }
+    // }
+
+    .content-name {
+      position: absolute;
+      bottom: 5px;
+      left: 0px;
+      transition: all 0.3s ease;
+    }
+
+    .content-name-focus {
+      transform: translateY(-150%);
+      font-size: 14px;
+      color: $blue-color;
+    }
+  }
+}
+///////
+@media all and (min-width: 600px) {
+}
+@media all and (min-width: 800px) {
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}

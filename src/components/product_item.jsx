@@ -11,25 +11,25 @@ class Item extends Component {
     return (
       <Card border="secondary" className="item">
         <Card.Img variant="top" src={dataImg} />
+
         <Card.Body>
           <Card.Title>{dataText}</Card.Title>
           <Card.Title style={{ fontSize: "90%", color: "grey" }}>
             {dataPrice}
           </Card.Title>
+          <hr />
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-            {/* {this.props.counters[1].value} AAA {this.props.counter[1]} */}
-            {this.props.brands[this.props.id].value} AAA {this.props.id}
+            {this.props.dataDesc}
+            {/* {this.props.brands[this.props.id].value} AAA {this.props.id} */}
           </Card.Text>
         </Card.Body>
         <Counters
-          item={this.props.item}
           id={this.props.id}
+          item={this.props.item}
+          brands={brands}
           counters={counters}
           onIncrement={onIncrement}
           onDecrease={onDecrease}
-          brands={brands}
         />
         <Button
           variant="secondary"

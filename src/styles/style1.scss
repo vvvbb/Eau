@@ -1,12 +1,14 @@
 // Version SCSS 22/07/2020
+$opacityBackground: 0.6;
+$blue-color: #333366;
+
 @import "./homepage";
 @import "./ressources";
+@import "./contactus";
 @import "./navbar";
 // @use './navbar.scss';
 @import "./items";
 @import "./counter";
-
-$opacityBackground: 0.6;
 
 body {
   /* background-color: #adfcf9; */
