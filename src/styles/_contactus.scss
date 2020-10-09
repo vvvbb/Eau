@@ -1,13 +1,13 @@
 ///////
 .contactus {
   .contactus-form {
-    display: flex;
+    // display: flex;
     justify-content: center;
     width: 50vw;
     margin-top: 10vh;
     margin: auto;
-    // border: 10px forestgreen ridge;
     margin-bottom: 50px;
+    // border: 10px forestgreen ridge;
   }
 
   .form {
@@ -18,7 +18,14 @@
 
   .form-row {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
+    div {
+      width: 48%;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 10px;
+    }
   }
 
   .form-select {

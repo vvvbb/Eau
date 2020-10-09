@@ -1,5 +1,4 @@
 ///////RESSOURCE ONLY
-
 .ressources-list {
   // border: 10px solid red;
   // width: 30vw;
@@ -8,14 +7,19 @@
   // display: flex;
   align-self: center;
   align-content: center;
+  // position: absolute;
   ul {
     list-style-type: none;
     align-items: center;
     li {
-      font-size: 1.2rem;
+      // font-size: 1.2rem;
+      font-size: 1rem;
       margin: 10px;
       color: #444;
       color: gray;
+      color: black;
+      margin: 50px 0px;
+      // text-align: center;
     }
   }
 }
