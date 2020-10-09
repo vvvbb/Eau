@@ -32,7 +32,7 @@
 }
 
 .form {
-  margin: 10% 10px;
+  margin: 10% 0;
   position: relative;
   height: 70px;
   overflow: hidden;
@@ -278,16 +278,6 @@
   }
 }
 
-.contactus .contactus-form {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50vw;
-  margin-top: 10vh;
-  margin: auto;
-  margin-bottom: 50px;
-}
-
 .contactus .form-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,7 +295,6 @@
   width: 48%;
   margin-left: 0;
   margin-right: 0;
-  padding-left: 10px;
 }
 
 .contactus .form-select {

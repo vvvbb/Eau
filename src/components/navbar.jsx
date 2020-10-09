@@ -40,6 +40,9 @@ class NavBar extends Component {
   };
 
   render() {
+    let styleCounter = "badge badge-pill badge-";
+    styleCounter += this.props.totalCounters === 0 ? "secondary" : "success";
+
     return (
       <nav className="navbar0000 navbar-light bg-light">
         <ul className="navbarlist">
@@ -63,7 +66,10 @@ class NavBar extends Component {
               />
             </li>
             <li>
-              <span className="badge badge-pill badge-secondary">
+              <span
+                // className="badge badge-pill badge-secondary"
+                className={styleCounter}
+              >
                 {this.props.totalCounters}
               </span>
             </li>
@@ -101,12 +107,12 @@ class NavBar extends Component {
               </ul>
             </li> */}
             <li>
-              <a href="./" className="navbar-connexion">
+              <a href="#" className="navbar-connexion">
                 Connexion
               </a>
             </li>
             <li>
-              <a href="./" className="navbar-connexion">
+              <a href="#" className="navbar-connexion">
                 Free Sample
               </a>
             </li>

@@ -26,7 +26,7 @@ function App() {
       {/* <Ressources /> */}
       <Router>
         <div>
-          <NavBar totalCounters={6} />
+          <NavBar totalCounters={0} />
           {/* A <Switch> looks through its children <Route>s and
              renders the first one that matches the current URL. */}
           <Switch>

@@ -173,7 +173,7 @@ class Items extends Component {
 
   render() {
     return (
-      <div className="ctg-flex">
+      <div className="ctg-flex ">
         <GroupButtonFilter
           carbondioxide={this.state.carbondioxide}
           onClickChild={this.handleClick}

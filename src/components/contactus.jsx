@@ -26,7 +26,7 @@ class Ressources extends React.Component {
       <div className="contactus">
         <HeaderBanner title="Contact Us" />
 
-        <div className="contactus-form">
+        <div className="contactus-form container">
           <form onSubmit={this.handleSubmit}>
             <div className="form-row">
               <Input id={1} name="name" label="Your Name..." />
@@ -46,7 +46,7 @@ class Ressources extends React.Component {
 
             {/* <input type="submit" value="Submit" /> */}
 
-            <Button variant="outline-dark" type="submit">
+            <Button variant="outline-dark mb-5" type="submit">
               Submit
             </Button>
           </form>
