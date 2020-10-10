@@ -1,21 +1,26 @@
 ///// header-banner
 .header-banner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   img {
     object-fit: cover;
     width: 100%;
     max-height: 60vh;
   }
   h1 {
-    z-index: 1;
+    // z-index: 1;
     position: absolute;
-    text-align: center;
-    align-self: center;
+    // text-align: center;
+    // align-self: center;
     color: ghostwhite;
+    // color: $color-blue;
+    // text-shadow: 0px 2px 1px ghostwhite;
+    // display: inline-block;
     font-size: 4rem;
+    font-weight: 100;
+    letter-spacing: 12px;
   }
 }
 

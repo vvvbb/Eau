@@ -179,7 +179,7 @@ class Items extends Component {
           onClickChild={this.handleClick}
         />
 
-        <div className="items">
+        <div className="items mx-5">
           {/* {this.state.filterBrands.map((id, brands) => (  */}
           {this.state.filterBrands.map((item, key) => (
             // {this.state.brands.map((item, key) => (
@@ -195,6 +195,7 @@ class Items extends Component {
               onClickaddToCart={this.addToCart}
               onIncrement={this.handleIncrement}
               onDecrease={this.handleDecrease}
+              className=""
             />
           ))}
         </div>
@@ -202,6 +203,7 @@ class Items extends Component {
         <GroupeTotal
           filterBrands={this.state.filterBrands}
           brands={this.state.brands}
+          className=""
         />
       </div>
     );

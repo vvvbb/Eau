@@ -1,114 +1,39 @@
 /* NAVBAR SECTION */
+
+// .navbar {
+//   outline: 10px ridge royalblue;
+//   border: 10px ridge royalblue;
+//   background-color: cadetblue !important;
+//   background-color: $blue-color !important;
+// }
+
 nav {
   background-color: GhostWhite;
   padding: 0.5% 0%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.navbarlist {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
-
-  li {
-    list-style-type: none;
-  }
+a {
+  font-family: "Montserrat", sans-serif;
+  color: #333366;
+  // color: black;
+  // color: whitesmoke;
+  // font-weight: bold;
 }
 
-.navbarulleft {
-  display: flex;
-  align-items: center;
-
-  li {
-    padding: 5px;
-    cursor: pointer;
-  }
-}
-.navbarulmenu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  // border: 5px red dashed;
-  // flex-grow: 4;
-  // justify-content: flex-end;
-  a {
-    font-weight: bold;
-    color: #333366;
-    font-family: "Montserrat", sans-serif;
-  }
-}
-
-.navbarulmenu a:hover {
+a:hover {
+  color: #333366;
   text-decoration-thickness: 0.1em;
   text-underline-offset: 10px;
   text-decoration: underline;
+  // text-decoration: none;
 }
 
-.navbarlist li {
-  margin: 0px 1px;
-}
-
-.navbarulmenu li {
-  margin: 10px;
-}
-
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-.navbar-connexion {
-  border: 1px ridge #333366;
-  padding: 20px 10px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-// h1 {
-//   font-size: 3em;
-//   color: #333366;
-//   font-family: "Montserrat", sans-serif;
-// }
-
-// p {
-//   background-color: rgba(51, 51, 102, 0.1);
-//   color: white;
-//   font-weight: bolder;
-//   font-family: Roboto;
-
-//   line-height: 200%;
-//   font-size: 1.1em;
-//   text-align: center;
-// }
-
-.navbar-lang {
-  position: relative;
-}
-.navbar-lang ul {
-  position: absolute;
-  padding: 0;
-  display: none;
-}
-
-.navbar-lang:hover > ul,
-.navbar-lang ul:hover {
-  display: block;
-}
-
-.navbar-lang:after {
-  content: " ▼";
-  font-size: 12px;
-}
-
-.flag {
-  width: 20px;
-  // z-index: 2;
-  // padding: 5px 10px;
-  // margin: -30px;
+.navbar-border {
+  @media (min-width: 768px) {
+    border: 1px ridge #333366;
+    padding: 20px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }

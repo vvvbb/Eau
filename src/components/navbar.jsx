@@ -2,6 +2,13 @@ import React, { Component } from "react";
 // import { NavLink } from "react-router-dom";
 // import { NavLink } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+// import NavDropdown from "react-bootstrap/NavDropdown";
+// import Form from "react-bootstrap/Form";
+// import FormControl from "react-bootstrap/FormControl";
+// import Button from "react-bootstrap/Button";
+// import Container from "react-bootstrap/Container";
 
 // import lang_en from "../img/flag_uk.png";
 // import lang_fr from "../img/flag_fr.png";
@@ -44,18 +51,64 @@ class NavBar extends Component {
     styleCounter += this.props.totalCounters === 0 ? "secondary" : "success";
 
     return (
-      <nav className="navbar0000 navbar-light bg-light">
+      <Navbar bg="light" expand="md" sticky="top">
+        <Navbar.Brand href="#home" className="ml-lg-5">
+          <Link to="/">
+            <img
+              style={this.img_properties}
+              src={this.img_properties.imageUrl}
+              alt=""
+            />
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Brand>
+          <FontAwesomeIcon icon={faShoppingCart} size="2x" color="#CCCCCC" />
+          <span
+            // className="badge badge-pill badge-secondary"
+            className={styleCounter}
+          >
+            {this.props.totalCounters}
+          </span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link href="#shop">
+              <Link to="/shop">Shop</Link>
+            </Nav.Link>
+            <Nav.Link href="#ressources">
+              <Link to="/ressources">Ressources</Link>
+            </Nav.Link>
+            <Nav.Link href="#contactus">
+              <Link to="/contactus">Contact us</Link>
+            </Nav.Link>
+            <Nav.Link href="#connexion">
+              <Link to="/connexion">
+                <a href="/" className="navbar-border">
+                  Connexion
+                </a>
+              </Link>
+            </Nav.Link>
+            <Nav.Link href="#freesample">
+              <Link to="/freesample">
+                <a href="/" className="navbar-border">
+                  Free Sample
+                </a>
+              </Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      /* <nav className=" navbar navbar-expand-lg navbar-light bg-light">
         <ul className="navbarlist">
           <ul className="navbarulleft">
             <li>
-              {/* <a className="navbar-brand-logo" href="./"> */}
               <Link to="/">
                 <img
                   style={this.img_properties}
                   src={this.img_properties.imageUrl}
                   alt=""
                 />
-                {/* </a> */}
               </Link>
             </li>
             <li>
@@ -76,36 +129,14 @@ class NavBar extends Component {
           </ul>
           <ul className="navbarulmenu">
             <li>
-              {/* <a href="./">Produit</a> */}
-              {/* <NavLink to="/produit">Produit</NavLink> */}
               <Link to="/shop">Shop</Link>
             </li>
             <li>
-              {/* <a href="./">Ressources</a> */}
-              {/* <NavLink to="/ressources">Ressources</NavLink> */}
               <Link to="/ressources">Ressources</Link>
             </li>
             <li>
-              {/* <a href="./">Contact us</a> */}
               <Link to="/contactus">Contact us</Link>
             </li>
-            {/* <li className="navbar-lang">
-              <a href="www.vvbb.fr">
-                <img src={lang_en} alt="" className="flag" />
-              </a>
-              <ul>
-                <li>
-                  <a href="www.vvbb.fr">
-                    <img src={lang_fr} alt="" className="flag" />
-                  </a>
-                </li>
-                <li>
-                  <a href="www.vvbb.fr">
-                    <img src={lang_zh} alt="" className="flag" />
-                  </a>
-                </li>
-              </ul>
-            </li> */}
             <li>
               <a href="#" className="navbar-connexion">
                 Connexion
@@ -119,6 +150,7 @@ class NavBar extends Component {
           </ul>
         </ul>
       </nav>
+      */
     );
   }
 }
