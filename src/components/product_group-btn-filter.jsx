@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 class GroupButtonFilter extends React.Component {
   render() {
     return (
-      <div className="group-button">
+      <div className="group-button d-none d-lg-flex flex-column ml-2 text-nowrap">
         {this.props.carbondioxide.map(({ name, id }) => (
           <Button
             className="btn btn-light btn-outline-secondary"

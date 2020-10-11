@@ -121,6 +121,19 @@ class Items extends Component {
         imageUrl:
           "https://shop.cabf.eu/wp-content/uploads/2017/05/8024884600301_001.jpg",
       },
+      {
+        id: 8,
+        name: "Mont Roucous",
+        catchphrase: "La pureté préservée.",
+        description:
+          "L'Eau Minérale Naturelle Mont Roucous est une eau pure et légère. Très faiblement minéralisée et pauvre en sodium, elle convient parfaitement à l’alimentation des nourrissons.",
+        year: "1975",
+        price: "1.44€",
+        category: "Still Water",
+        value: 0,
+        imageUrl:
+          "https://cdn.mcommerce.franprix.fr/product-images/3257971080112_A1C1_s01_avant",
+      },
     ],
     filterBrands: [],
   };

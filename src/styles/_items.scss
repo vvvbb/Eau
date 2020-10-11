@@ -13,34 +13,34 @@
   min-height: 100vh;
 }
 
-.group-button {
-  margin: 0 10px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  min-width: 10%;
-  :hover {
-    font-weight: bold;
-  }
-}
+// .group-button {
+//   margin: 0 10px;
+//   cursor: pointer;
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 10%;
+//   :hover {
+//     font-weight: bold;
+//   }
+// }
 
-.group-total {
-  border: 1px gray solid;
-  background-color: whitesmoke;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 0 10px;
-  display: flex;
-  flex-direction: column;
-  min-width: 10%;
-  * {
-    margin: 2px;
-    cursor: pointer;
-  }
-  h3 {
-    text-align: center;
-  }
-}
+// .group-total {
+//   border: 1px gray solid;
+//   background-color: whitesmoke;
+//   border-radius: 5px;
+//   padding: 10px;
+//   margin: 0 10px;
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 10%;
+//   * {
+//     margin: 2px;
+//     cursor: pointer;
+//   }
+//   h3 {
+//     text-align: center;
+//   }
+// }
 
 @media screen and (max-width: 1200px) {
   .group-button {
